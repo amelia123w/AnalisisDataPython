@@ -1,7 +1,5 @@
 # Belajar Analisis Data dengan Python
 
-## Tampilan
-
 ## Deskripsi
 
 Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset.
