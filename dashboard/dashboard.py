@@ -41,6 +41,8 @@ def macem_season (day_df):
     season_df = day_df.groupby(by="season").count_cr.sum().reset_index() 
     return season_df
 
+script_dir = os.path.dirname(os.path.realpath(__file__))
+df= pd.read_csv(f"{script_dir}/data.csv")
 days_df = pd.read_csv("data.csv")
 hours_df = pd.read_csv("data.csv")
 
