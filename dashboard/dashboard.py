@@ -88,20 +88,20 @@ season_df = macem_season(main_df_hour)
 #visualisasi data
 st.header('Proyek Bike Sharing Dataset')
 
-st.subheader('Daily Sharing')
+st.subheader('Pembagian Hari')
 col1, col2, col3 = st.columns(3)
  
 with col1:
     total_orders = day_df_count_2011.count_cr.sum()
-    st.metric("Total Sharing Bike", value=total_orders)
+    st.metric("Jumlah Pembagian Sepeda", value=total_orders)
 
 with col2:
     total_sum = reg_df.register_sum.sum()
-    st.metric("Total Registered", value=total_sum)
+    st.metric("Jumlah Yang Terdaftar", value=total_sum)
 
 with col3:
     total_sum = cas_df.casual_sum.sum()
-    st.metric("Total Casual", value=total_sum)
+    st.metric("Jumlah Yang Kasual", value=total_sum)
 
 st.subheader("Jam berapakah yang paling sedikit dan banyak disewa sepeda oleh penyewa?")#hasilnya nanti jam paling sedikit dan banyak sepeda disewa
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
@@ -141,5 +141,3 @@ ax.set_xlabel(None)
 ax.tick_params(axis='x', labelsize=35)
 ax.tick_params(axis='y', labelsize=30)
 st.pyplot(fig)
-
-
