@@ -1,0 +1,8 @@
+## Cara Lihat Proyek
+1. Masuk ke direktori proyek (Local):
+
+    ```shell
+    cd Projek Analisis Data Bike Sharing Dataset/submission/dashboard/
+    streamlit run dashboard.py
+    ```
+    dapat dilihat dengan kunjungi website berikut [Proyek Submission Data Analisis](https://7tfwzbbrbr4vrxemetmhwi.streamlit.app/)
