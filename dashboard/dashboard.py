@@ -1,7 +1,7 @@
-import pandas as pd
-import matplotlib.pyplot as plt
 import seaborn as sns
+import pandas as pd
 import streamlit as st
+import matplotlib.pyplot as plt
 
 sns.set(style='dark')
 
@@ -62,10 +62,10 @@ min_date_hour = hours_df["dteday"].min()
 max_date_hour = hours_df["dteday"].max()
 
 with st.sidebar:
-    # Menambahkan logo perusahaan
+    #  logo 
     st.image("dashboard/depositphotos_437788698-stock-illustration-bike-sharing-abstract-concept-vector.png")
     
-        # Mengambil start_date & end_date dari date_input
+        # ambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
         label='Rentang Waktu',
         min_value=min_date_days,
@@ -85,8 +85,8 @@ cas_df = total_casual_df(main_df_days)
 sum_order_items_df = sum_order(main_df_hour)
 season_df = macem_season(main_df_hour)
 
-#Melengkapi Dashboard dengan Berbagai Visualisasi Data
-st.header('Bike Sharing Submission')
+#visualisasi data
+st.header('Proyek Bike Sharing Dataset')
 
 st.subheader('Daily Sharing')
 col1, col2, col3 = st.columns(3)
@@ -103,20 +103,20 @@ with col3:
     total_sum = cas_df.casual_sum.sum()
     st.metric("Total Casual", value=total_sum)
 
-st.subheader("Pada jam berapa yang paling sedikit dan banyak disewa?")
+st.subheader("Jam berapakah yang paling sedikit dan banyak disewa sepeda oleh penyewa?")#hasilnya nanti jam paling sedikit dan banyak sepeda disewa
 fig, ax = plt.subplots(nrows=1, ncols=2, figsize=(35, 15))
 
 sns.barplot(x="hours", y="count_cr", data=sum_order_items_df.head(5), palette=["#D3D3D3", "#D3D3D3", "#90CAF9", "#D3D3D3", "#D3D3D3"], ax=ax[0])
 ax[0].set_ylabel(None)
 ax[0].set_xlabel("Hours (PM)", fontsize=30)
-ax[0].set_title("Jam dengan banyak penyewa sepeda", loc="center", fontsize=30)
+ax[0].set_title("Jam banyak penyewa sepeda", loc="center", fontsize=30)
 ax[0].tick_params(axis='y', labelsize=35)
 ax[0].tick_params(axis='x', labelsize=30)
  
 sns.barplot(x="hours", y="count_cr", data=sum_order_items_df.sort_values(by="hours", ascending=True).head(5), palette=["#D3D3D3", "#D3D3D3", "#D3D3D3", "#D3D3D3","#90CAF9"], ax=ax[1])
 ax[1].set_ylabel(None)
 ax[1].set_xlabel("Hours (AM)",  fontsize=30)
-ax[1].set_title("Jam dengan sedikit penyewa sepeda", loc="center", fontsize=30)
+ax[1].set_title("Jam sedikit penyewa sepeda", loc="center", fontsize=30)
 ax[1].invert_xaxis()
 ax[1].yaxis.set_label_position("right")
 ax[1].yaxis.tick_right()
@@ -124,7 +124,7 @@ ax[1].tick_params(axis='y', labelsize=35)
 ax[1].tick_params(axis='x', labelsize=30)
  
 st.pyplot(fig)
-st.subheader("Musim apa yang paling banyak disewa?")
+st.subheader("Apakah musim yang paling banyak penyewa sewa sepeda?") #hasilnya adalah musim yang paling banyak penyewa sewa
 
 colors = ["#D3D3D3", "#D3D3D3", "#D3D3D3", "#90CAF9"]
 fig, ax = plt.subplots(figsize=(20, 10))
@@ -135,12 +135,11 @@ sns.barplot(
         palette=colors,
         ax=ax
     )
-ax.set_title("Grafik Antar Musim", loc="center", fontsize=50)
+ax.set_title("Grafik Musim", loc="center", fontsize=50)
 ax.set_ylabel(None)
 ax.set_xlabel(None)
 ax.tick_params(axis='x', labelsize=35)
 ax.tick_params(axis='y', labelsize=30)
 st.pyplot(fig)
-
 
 
