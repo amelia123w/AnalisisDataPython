@@ -63,7 +63,7 @@ max_date_hour = hours_df["dteday"].max()
 
 with st.sidebar:
     # Menambahkan logo perusahaan
-    st.image("D:\\Projek Analisis Data Bike Sharing Dataset\\submission\\dashboard\\depositphotos_437788698-stock-illustration-bike-sharing-abstract-concept-vector.png")
+    st.image("submission/dashboard/depositphotos_437788698-stock-illustration-bike-sharing-abstract-concept-vector.png")
     
         # Mengambil start_date & end_date dari date_input
     start_date, end_date = st.date_input(
