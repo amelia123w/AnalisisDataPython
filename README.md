@@ -1,7 +1,7 @@
 # Submission Dicoding "Belajar Analisis Data dengan Python"
 
 ## Tampilan
-![tampilan_bike_sharing](https://github.com/user-attachments/assets/8f0680a9-3aed-45ce-9421-cf9018c5281a)
+![tampilan_bike_sharing](https://github.com/user-attachments/assets/ee1fce94-6bbb-4635-b0aa-9b74f59b3279)
 
 ## Deskripsi
 
