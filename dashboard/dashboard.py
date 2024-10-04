@@ -88,7 +88,7 @@ season_df = macem_season(main_df_hour)
 #visualisasi data
 st.header('Proyek Bike Sharing Dataset')
 
-st.subheader('Jumlah Bike Sharing')
+st.subheader('Tentang Bike Sharing')
 col1, col2, col3 = st.columns(3)
  
 with col1:
