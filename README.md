@@ -26,7 +26,7 @@ Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset.
     pip freeze requirements.txt
     ```
 
-## Penggunaan
+## Cara Lihat Proyek
 1. Masuk ke direktori proyek (Local):
 
     ```shell
