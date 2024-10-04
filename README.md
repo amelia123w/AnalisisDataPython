@@ -23,6 +23,7 @@ Proyek ini bertujuan untuk menganalisis data pada Bike Sharing Dataset.
     pip install matplotlib
     pip install seaborn
     pip install -r requirements.txt
+    pip freeze requirements.txt
     ```
 
 ## Penggunaan
