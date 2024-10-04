@@ -1,7 +1,8 @@
 # Submission Dicoding "Belajar Analisis Data dengan Python"
 
 ## Tampilan
-![Bike Sharing Dashboard Streamlit Preview]()
+![Bike Sharing Dashboard Streamlit Preview](![tampilan_bike_sharing](https://github.com/user-attachments/assets/32b203d1-80d3-4135-bcea-257b428986f3)
+)
 
 ## Deskripsi
 
